@@ -9,6 +9,7 @@ function App() {
    * 
    */
   const title = import.meta.env.VITE_APP_TITLE
+  const showLogo = import.meta.env.VITE_APP_SHOW_LOGO
   const website = import.meta.env.VITE_APP_WEBSITE
   const email = import.meta.env.VITE_APP_EMAIL
   const address = import.meta.env.VITE_APP_ADDRESS
@@ -27,11 +28,11 @@ function App() {
               
               <div className="mx-auto max-w-md px-4 text-center sm:max-w-2xl sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
                 <div className="lg:py-24">
-                  <img className='block lg:hidden mx-auto h-[200px]' src={logo} alt={website} />
+                  {showLogo === 'true' &&<img className='block lg:hidden mx-auto h-[200px]' src={logo} alt={website} />}
 
                   <h1 className="mt-4 text-4xl font-bold tracking-tight text-black sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                     <span className="block" style={{color: themeColor}}>{ title } </span>
-                    <span className="block text-black">{ website }</span>
+                    <span className="block text-black xl:text-4xl">{ website }</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                     { description }
@@ -85,7 +86,7 @@ function App() {
               </div>
 
               <div className="mt-12 hidden lg:block relative">
-                <img className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full bg-white bg-opacity-75 p-16" src={logo} alt={website} />
+                {showLogo === 'true' && <img className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full bg-white bg-opacity-75 p-16" src={logo} alt={website} />}
                 <img src={mockup} alt="" />
               </div>
             </div>
