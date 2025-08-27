@@ -1,9 +1,9 @@
-import logo from '../assets/logo.png'
 import { PhoneIcon, MailIcon, LocationIcon, InstagramIcon, FacebookIcon } from '../Icons'
 
 const MinimalTemplate = ({ 
   title, 
   showLogo, 
+  srcLogo,
   website, 
   email, 
   address, 
@@ -14,9 +14,9 @@ const MinimalTemplate = ({
   facebookUrl 
 }) => (
   <main className="min-h-screen flex flex-col">
-    <div className="flex-grow flex items-center justify-center p-4">
+    <div className="grow flex items-center justify-center p-4">
       <div className="max-w-3xl mx-auto text-center">
-        {showLogo === 'true' && <img className="h-32 mx-auto mb-8" src={logo} alt={website} />}
+        {showLogo === 'true' && <img className="h-32 mx-auto mb-8" src={srcLogo} alt={website} />}
         
         <h1 className="text-5xl font-bold mb-4" style={{color: themeColor}}>
           {title}

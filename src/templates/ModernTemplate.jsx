@@ -1,9 +1,9 @@
-import logo from '../assets/logo.png'
 import { PhoneIcon, MailIcon, LocationIcon, InstagramIcon, FacebookIcon } from '../Icons'
 
 const ModernTemplate = ({ 
   title, 
   showLogo, 
+  srcLogo,
   website, 
   email, 
   address, 
@@ -13,12 +13,12 @@ const ModernTemplate = ({
   instagramUrl, 
   facebookUrl 
 }) => (
-  <main className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100">
-    <div className="flex-grow flex items-center justify-center p-6">
+  <main className="min-h-screen flex flex-col bg-linear-to-br from-gray-50 to-gray-100">
+    <div className="grow flex items-center justify-center p-6">
       <div className="max-w-5xl w-full mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="md:flex">
           <div className="md:w-1/2 p-8 md:p-12">
-            {showLogo === 'true' && <img className="h-16 mb-8" src={logo} alt={website} />}
+            {showLogo === 'true' && <img className="h-16 mb-8" src={srcLogo} alt={website} />}
             
             <h1 className="text-4xl font-extrabold mb-2" style={{color: themeColor}}>
               {title}
@@ -76,7 +76,7 @@ const ModernTemplate = ({
             <div className="h-64 md:h-full" style={{backgroundColor: themeColor}}>
               {showLogo === 'true' && (
                 <img 
-                  src={logo} 
+                  src={srcLogo} 
                   alt={website} 
                   className="absolute inset-0 w-full h-full object-contain p-12 bg-white bg-opacity-10"
                 />

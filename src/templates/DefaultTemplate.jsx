@@ -1,9 +1,9 @@
 import mockup from '../assets/mockup.png'
-import logo from '../assets/logo.png'
 import { PhoneIcon, MailIcon, LocationIcon, InstagramIcon, FacebookIcon } from '../Icons'
 
 const DefaultTemplate = ({ 
   title, 
+  srcLogo,
   showLogo, 
   website, 
   email, 
@@ -22,7 +22,7 @@ const DefaultTemplate = ({
             
             <div className="mx-auto max-w-md px-4 text-center sm:max-w-2xl sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
               <div className="lg:py-24">
-                {showLogo === 'true' && <img className='block lg:hidden mx-auto h-[200px]' src={logo} alt={website} />}
+                {showLogo === 'true' && <img className='block lg:hidden mx-auto h-[200px]' src={srcLogo} alt={website} />}
 
                 <h1 className="mt-4 text-4xl font-bold tracking-tight text-black sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                   <span className="block" style={{color: themeColor}}>{ title } </span>
@@ -35,7 +35,7 @@ const DefaultTemplate = ({
                 <div className="block md:gap-6 md:justify-center md:flex lg:block mt-8 sm:mt-10 md:bg-white">
                   { email &&
                     <div className='mb-6 flex items-center justify-start gap-3 text-start'>
-                      <figure className='bg-gray-100 shadow p-2 rounded-full'>
+                      <figure className='bg-gray-100 shadow-sm p-2 rounded-full'>
                         <MailIcon className="w-10 h-10" style={{color: themeColor}} />
                       </figure>
                       <article>
@@ -49,7 +49,7 @@ const DefaultTemplate = ({
 
                   { phone &&
                     <div className='mb-6 flex items-center justify-start gap-3 text-start'>
-                      <figure className='bg-gray-100 shadow p-2 rounded-full'>
+                      <figure className='bg-gray-100 shadow-sm p-2 rounded-full'>
                         <PhoneIcon className="w-10 h-10" style={{color: themeColor}} />
                       </figure>
                       <article>
@@ -63,7 +63,7 @@ const DefaultTemplate = ({
 
                   { address &&
                     <div className='mb-6 flex items-center justify-start gap-3 text-start'>
-                      <figure className='bg-gray-100 shadow p-2 rounded-full'>
+                      <figure className='bg-gray-100 shadow-sm p-2 rounded-full'>
                         <LocationIcon className="w-10 h-10" style={{color: themeColor}} />
                       </figure>
                       <article>
@@ -80,7 +80,7 @@ const DefaultTemplate = ({
             </div>
 
             <div className="mt-12 hidden lg:block relative">
-              {showLogo === 'true' && <img className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full bg-white bg-opacity-75 p-16" src={logo} alt={website} />}
+              {showLogo === 'true' && <img className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full bg-white bg-opacity-75 p-16" src={srcLogo} alt={website} />}
               <img src={mockup} alt="" />
             </div>
           </div>
