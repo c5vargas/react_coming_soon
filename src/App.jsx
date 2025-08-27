@@ -3,6 +3,7 @@ import TEMPLATES from './templates'
 function App() {
   const title = import.meta.env.VITE_APP_TITLE
   const showLogo = import.meta.env.VITE_APP_SHOW_LOGO
+  const srcLogo = import.meta.env.VITE_APP_URL_LOGO
   const website = import.meta.env.VITE_APP_WEBSITE
   const email = import.meta.env.VITE_APP_EMAIL
   const address = import.meta.env.VITE_APP_ADDRESS
@@ -16,6 +17,7 @@ function App() {
   const templateProps = {
     title,
     showLogo,
+    srcLogo,
     website,
     email,
     address,
