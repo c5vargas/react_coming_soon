@@ -2,6 +2,7 @@ import TEMPLATES from './templates'
 
 function App() {
   const title = import.meta.env.VITE_APP_TITLE
+  const siteName = import.meta.env.VITE_APP_NAME
   const showLogo = import.meta.env.VITE_APP_SHOW_LOGO
   const srcLogo = import.meta.env.VITE_APP_URL_LOGO
   const website = import.meta.env.VITE_APP_WEBSITE
@@ -12,6 +13,7 @@ function App() {
   const themeColor = import.meta.env.VITE_APP_COLOR
   const instagramUrl = import.meta.env.VITE_APP_SOCIAL_INSTAGRAM
   const facebookUrl = import.meta.env.VITE_APP_SOCIAL_FACEBOOK
+  const twitterUrl = import.meta.env.VITE_APP_SOCIAL_TWITTER
   const template = import.meta.env.VITE_APP_TEMPLATE || 'default'
 
   const templateProps = {
@@ -21,10 +23,12 @@ function App() {
     website,
     email,
     address,
+    siteName,
     phone,
     description,
     themeColor,
     instagramUrl,
+    twitterUrl,
     facebookUrl
   };
 

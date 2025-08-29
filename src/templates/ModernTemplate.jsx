@@ -1,4 +1,4 @@
-import { PhoneIcon, MailIcon, LocationIcon, InstagramIcon, FacebookIcon } from '../Icons'
+import { PhoneIcon, MailIcon, LocationIcon, InstagramIcon, FacebookIcon, TwitterIcon } from '../Icons'
 
 const ModernTemplate = ({ 
   title, 
@@ -11,11 +11,12 @@ const ModernTemplate = ({
   description, 
   themeColor, 
   instagramUrl, 
-  facebookUrl 
+  facebookUrl,
+  twitterUrl
 }) => (
   <main className="min-h-screen flex flex-col bg-linear-to-br from-gray-50 to-gray-100">
-    <div className="grow flex items-center justify-center p-6">
-      <div className="max-w-5xl w-full mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div className="grow flex items-center justify-center sm:p-6">
+      <div className="max-w-5xl w-full mx-auto bg-white sm:rounded-2xl sm:shadow-xl overflow-hidden">
         <div className="md:flex">
           <div className="md:w-1/2 p-8 md:p-12">
             {showLogo === 'true' && <img className="h-16 mb-8" src={srcLogo} alt={website} />}
@@ -60,13 +61,19 @@ const ModernTemplate = ({
             <div className="flex space-x-4">
               {instagramUrl && (
                 <a href={instagramUrl} target="_blank" className="text-gray-400 hover:text-gray-600">
-                  <InstagramIcon className="w-6 h-6" />
+                  <InstagramIcon className="w-6 h-6 text-gray-800" />
                 </a>
               )}
               
               {facebookUrl && (
                 <a href={facebookUrl} target="_blank" className="text-gray-400 hover:text-gray-600">
-                  <FacebookIcon className="w-6 h-6" />
+                  <FacebookIcon className="w-6 h-6 text-gray-800" />
+                </a>
+              )}
+
+              {twitterUrl && (
+                <a href={twitterUrl} target="_blank" className="text-gray-400 hover:text-gray-600">
+                  <TwitterIcon className="w-6 h-6 text-gray-800" />
                 </a>
               )}
             </div>

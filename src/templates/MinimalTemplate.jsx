@@ -1,4 +1,4 @@
-import { PhoneIcon, MailIcon, LocationIcon, InstagramIcon, FacebookIcon } from '../Icons'
+import { PhoneIcon, MailIcon, LocationIcon, InstagramIcon, FacebookIcon, TwitterIcon } from '../Icons'
 
 const MinimalTemplate = ({ 
   title, 
@@ -11,6 +11,7 @@ const MinimalTemplate = ({
   description, 
   themeColor, 
   instagramUrl, 
+  twitterUrl,
   facebookUrl 
 }) => (
   <main className="min-h-screen flex flex-col">
@@ -57,14 +58,21 @@ const MinimalTemplate = ({
           {instagramUrl && (
             <a href={instagramUrl} target="_blank" className="text-gray-400 hover:text-gray-600">
               <span className="sr-only">Instagram</span>
-              <InstagramIcon />
+              <InstagramIcon className="w-6 h-6 text-gray-800" />
             </a>
           )}
           
           {facebookUrl && (
             <a href={facebookUrl} target="_blank" className="text-gray-400 hover:text-gray-600">
               <span className="sr-only">Facebook</span>
-              <FacebookIcon />
+              <FacebookIcon className="w-6 h-6 text-gray-800" />
+            </a>
+          )}
+
+          {twitterUrl && (
+            <a href={twitterUrl} target="_blank" className="text-gray-400 hover:text-gray-600">
+              <span className="sr-only">Twitter</span>
+              <TwitterIcon className="w-6 h-6 text-gray-800" />
             </a>
           )}
         </div>
