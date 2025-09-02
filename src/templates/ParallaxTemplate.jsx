@@ -69,7 +69,7 @@ const ParallaxTemplate = ({
               {facebookUrl && (
                 <a
                   href={facebookUrl}
-                  className="bg-white/80 rounded-full p-3 hover:bg-opacity-90 transition"
+                  className="bg-white/80 rounded-xl p-2 hover:bg-opacity-90 transition"
                   aria-label="Facebook"
                 >
                   <FacebookIcon className="w-6 h-6 text-gray-800" />
@@ -78,7 +78,7 @@ const ParallaxTemplate = ({
               {twitterUrl && (
                 <a
                   href={twitterUrl}
-                  className="bg-white/80 rounded-full p-3 hover:bg-opacity-90 transition"
+                  className="bg-white/80 rounded-xl p-2 hover:bg-opacity-90 transition"
                   aria-label="Twitter"
                 >
                   <TwitterIcon className="w-6 h-6 text-gray-800" />
@@ -87,7 +87,7 @@ const ParallaxTemplate = ({
               {instagramUrl && (
                 <a
                   href={instagramUrl}
-                  className="bg-white/80 rounded-full p-3 hover:bg-opacity-90 transition"
+                  className="bg-white/80 rounded-xl p-2 hover:bg-opacity-90 transition"
                   aria-label="Instagram"
                 >
                   <InstagramIcon className="w-6 h-6 text-gray-800" />
